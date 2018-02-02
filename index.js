@@ -1,5 +1,5 @@
 var grid1 = "_6_3__8_4537_9_____4___63_7_9__51238_________71362__4_3_64___1_____6_5231_2__9_8_";
-var grid2 = ["_2_456789457_8_236689237_4___5362974274_9_6533965748___4_618397761_4_528938725_6_"];
+var grid2 = "_2_456789457_8_236689237_4___5362974274_9_6533965748___4_618397761_4_528938725_6_";
 var keys = document.getElementsByClassName("keys");
 
 
@@ -40,12 +40,18 @@ function drawGB(){ //   to see 3x3 grids
         gbi.style.zIndex = "1";
         gbi.setAttribute("class", "greens");
         document.getElementById("_green_").appendChild(gbi);
-
     }
 }
 
 function solver(){
-
+    var crook = [];
+    let x = 0;
+    let y = 0;
+    for(let i = 0; i < 81; i++){
+        x = i%9;
+        y = (Math.floor((i/9) + 1));
+        console.log("X: " + x + " Y: " +  y);
+    }
 }
 
 setGrid(grid1);
