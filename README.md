@@ -78,6 +78,10 @@ Because of this, I needed to convert the current box to Cartesian coordinates (X
         console.log("X: " + x + " Y: " +  y + " Value: " + grid1[i]);
     }
 ```
+
+This is the output on the console:
+
 <p align="center">
-  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS5.png">
+  <img width="700" height="800" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS5.png">
 </p>
+
