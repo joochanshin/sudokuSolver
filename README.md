@@ -79,7 +79,7 @@ Because of this, I needed to convert the current box to Cartesian coordinates (X
     }
 ```
 
-This is the output on the console:
+This is part of the output on the console:
 
 <p align="center">
   <img width="700" height="800" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS5.png">
