@@ -3,3 +3,7 @@
 	margin-top: 0 auto;
 	@include centerer;
 }
+
+#_green_{
+	@extend #wrapper;
+}
