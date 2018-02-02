@@ -40,7 +40,10 @@ and after inserting
 key.style.textAlign = "center";
 ```
 it then looked like
-![alt text](https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS2.png)
+
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS2.png">
+</p>
 
 After playing around with a few lines of code I ended up having
 ```
@@ -52,7 +55,12 @@ but ended up realizing that
 key.style.verticalAlign = "middle";
 ```
 was not needed
-![alt text](https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS3.png)
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS3.png">
+</p>
 
 Further more, I added a green dashed lines to better see the divions of 3x3 grids
-![alt text] (https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS4.png)
+
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS4.png">
+</p>
