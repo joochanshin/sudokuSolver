@@ -1,0 +1,5 @@
+#wrapper{
+	width: $size;
+	margin-top: 0 auto;
+	@include centerer;
+}
