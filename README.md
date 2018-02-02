@@ -64,3 +64,20 @@ Further more, I added a green dashed lines to better see the divions of 3x3 grid
 <p align="center">
   <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS4.png">
 </p>
+
+But because I was not thinking... I made a giant forloop that loops 81 times instead of having a nested forloops that prints 9by9.
+
+Because of this, I needed to convert the current box to Cartesian coordinates (X and Y).
+
+```
+ let x = 0;
+    let y = 0;
+    for(let i = 0; i < 81; i++){
+        x = i%9;
+        y = (Math.floor((i/9) + 1));
+        console.log("X: " + x + " Y: " +  y + " Value: " + grid1[i]);
+    }
+```
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS5.png">
+</p>
