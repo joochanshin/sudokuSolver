@@ -50,7 +50,7 @@ function solver(){
     for(let i = 0; i < 81; i++){
         x = i%9;
         y = (Math.floor((i/9) + 1));
-        console.log("X: " + x + " Y: " +  y);
+        console.log("X: " + x + " Y: " +  y + " Value: " + grid1[i]);
     }
 }
 
