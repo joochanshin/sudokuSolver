@@ -31,7 +31,9 @@ Just a few documentatons of my journey through trials and error
 Setting up the table was not very difficult. But it was annoying to center the text vertically and horizontally. 
 
 This is how it looked at first (with temporary template)
-![alt text](https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS1.png) <!-- .element height="50%" width="50%" -->
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS1.png">
+</p>
 
 and after inserting
 ```
