@@ -24,6 +24,10 @@ Run a localhost of your choosing
 
 ## Running Tests
 
+Just a few documentatons of my journey through trials and error
+
+### Styling
+
 Setting up the table was not very difficult. But it was annoying to center the text vertically and horizontally. 
 
 This is how it looked at first (with temporary template)
