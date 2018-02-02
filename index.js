@@ -19,7 +19,7 @@ function setGrid(grid){//   Makes grid and the boxes
         document.getElementById('top').appendChild(key);
     }
     drawGrid(grid);
-    //drawGB();
+    drawGB();
 }
 
 function drawGrid(grid){//  prints out text onto the boxes
