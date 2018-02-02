@@ -51,3 +51,6 @@ key.style.verticalAlign = "middle";
 ```
 was not needed
 ![alt text](https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS3.png)
+
+Further more, I added a green dashed lines to better see the divions of 3x3 grids
+![alt text] (https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS4.png)
