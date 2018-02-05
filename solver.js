@@ -9,7 +9,7 @@ function solver(){
         if(grid1[i] === "_"){
             grid1[i] = array;
         
-            for(let j = 1; j < 10; j++){
+            for(let j = 1; j < 10; j++){//Start of forloop for GB
                 //  First three GBs
                 if(x <= 2 &&  y <= 3)
                     if(first1(j))
@@ -40,7 +40,7 @@ function solver(){
                 if(x <= 9 && x > 5 &&  y <= 9 && y > 6)
                     if(third2(j))
                         grid1[i] = remove(grid1[i], j);
-            }
+            }//End of forloop for GB
         }
         console.log("X: " + x + " Y: " +  y + " Value: " + grid1[i]); // To just see the values of the grid in X and Y format
     }
