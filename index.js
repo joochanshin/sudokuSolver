@@ -1,4 +1,4 @@
-var grid1 = "_6_3__8_4537_9_____4___63_7_9__51238_________71362__4_3_64___1_____6_5231_2__9_8_";
+var grid1 = "_6_3__8_4537_9_____4___63_7_9__51238_________71362__4_3_64___1_____6_5231_2__9_8_".split("");
 var grid2 = "_2_456789457_8_236689237_4___5362974274_9_6533965748___4_618397761_4_528938725_6_";
 var keys = document.getElementsByClassName("keys");
 
@@ -43,16 +43,7 @@ function drawGB(){ //   to see 3x3 grids
     }
 }
 
-function solver(){
-    var crook = [];
-    let x = 0;
-    let y = 0;
-    for(let i = 0; i < 81; i++){
-        x = i%9;                        //  This is to get the X value
-        y = (Math.floor((i/9) + 1));    //  This is to get the Y value
-        console.log("X: " + x + " Y: " +  y + " Value: " + grid1[i]); // To just see the values of the grid in X and Y format
-    }
-}
+
 /*
 //  For first 3x3 box: gb1 (Green box 1)
     if(i%9 <=2)                     //X
@@ -73,6 +64,9 @@ function _try_(){
 }
 
 
+function remove(array, element) {
+    return array.filter(e => e !== element);
+}
 
 setGrid(grid1);
 
