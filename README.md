@@ -85,3 +85,67 @@ This is part of the output on the console:
   <img width="700" height="800" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS5.png">
 </p>
 
+## Solver
+
+In order for me to really try fully grasp how to solve this, I tried to break it down into very basic steps. 
+
+### GB
+
+I wanted to to loop through each GB first which is each 3x3 box. 
+
+And if the element is empty, then replace it with an array.
+
+I have
+```
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+and then the code 
+```
+if(grid1[i] === "_"){
+  grid1[i] = array;
+```
+To replace each empty spot with an array with all numbers. This is to temporarily hold all possible values. I want to search through each GB to see if one of the number is in there. If it is, the certain element cannot have that value. So this is then removed as a possible value. 
+
+For example: in the example grid I have, the first GB has the values:
+```
+_ 6 _
+5 3 7
+_ 4 _
+```
+
+Next I will show what happens. 
+
+In my `solver.js` file, I have this code to check the first set of GBs: 
+```
+//  First three GBs
+if(x <= 2 &&  y <= 3)
+  if(first1(j))
+    grid1[i] = remove(grid1[i], j);
+if(x <= 5 && x > 2 &&  y <= 3)
+  if(second1(j))
+    grid1[i] = remove(grid1[i], j);
+if(x <= 9 && x > 5 &&  y <= 3)
+  if(third1(j))
+    grid1[i] = remove(grid1[i], j);
+```
+
+and an example of a GB search code is essentially:
+```
+function first1(num){   //  First GB in first row
+    for(let x = 0; x < 9; x++){
+        for(let y = 0; y < 9; y++){
+            if(x%9 <= 2 &&  Math.floor(y%9 + 1) <= 3){
+            	//console.log(num, grid1[(x) + (y)*9])
+            	if(num == grid1[(x) + (y)*9])
+            		return true;
+                //console.log("X: " + x + " Y: " + y + " Value: " + grid1[(x) + (y)*9]);
+            }
+        }
+    }
+}
+```
+
+Which then outputs this:
+<p align="center">
+  <img width="700" height="800" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS6.png">
+</p>
