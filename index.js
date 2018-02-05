@@ -63,15 +63,6 @@ function solver(){
     if(i)
 */
 
-function first(){
-    for(let x = 0; x < 9; x++){
-        for(let y = 0; y < 9; y++){
-            if(x%9 <= 2 &&  Math.floor(y%9 + 1) <= 3){
-                console.log("X: " + x + " Y: " + y + " Value: " + grid1[(x) + (y)*9]);
-            }
-        }
-    }
-}
 
 function _try_(){
     for(let x = 0; x < 9; x++){
