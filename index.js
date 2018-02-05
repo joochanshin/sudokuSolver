@@ -53,5 +53,50 @@ function solver(){
         console.log("X: " + x + " Y: " +  y + " Value: " + grid1[i]);
     }
 }
+/*
+//  For first 3x3 box: gb1 (Green box 1)
+    if(i%9 <=2)                     //X
+    if(Math.floor(i/9 + 1) <= 3)    //Y
+
+//  For second 3x3 box: gb2 (Green box2)
+    if(i%9 > 3 && i%9 <= 5)         //X
+    if(i)
+*/
+
+function first(){
+    for(let x = 0; x < 9; x++){
+        for(let y = 0; y < 9; y++){
+            if(x%9 <= 2 &&  Math.floor(y%9 + 1) <= 3){
+                console.log("X: " + x + " Y: " + y + " Value: " + grid1[(x) + (y)*9]);
+            }
+        }
+    }
+}
+
+function _try_(){
+    for(let x = 0; x < 9; x++){
+        for(let y = 0; y < 9; y++){
+            console.log("X: " + x + " Y: " + y + " Value: " + grid1[(x) + (y)*9]);
+        }
+    }
+}
+
+
 
 setGrid(grid1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
