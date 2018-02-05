@@ -48,9 +48,9 @@ function solver(){
     let x = 0;
     let y = 0;
     for(let i = 0; i < 81; i++){
-        x = i%9;
-        y = (Math.floor((i/9) + 1));
-        console.log("X: " + x + " Y: " +  y + " Value: " + grid1[i]);
+        x = i%9;                        //  This is to get the X value
+        y = (Math.floor((i/9) + 1));    //  This is to get the Y value
+        console.log("X: " + x + " Y: " +  y + " Value: " + grid1[i]); // To just see the values of the grid in X and Y format
     }
 }
 /*
@@ -63,11 +63,11 @@ function solver(){
     if(i)
 */
 
-
+//  For testing purposes
 function _try_(){
     for(let x = 0; x < 9; x++){
         for(let y = 0; y < 9; y++){
-            console.log("X: " + x + " Y: " + y + " Value: " + grid1[(x) + (y)*9]);
+            console.log("X: " + x + " Y: " + y + " Value: " + grid1[(x) + (y)*9]);//    This is to access the values in an array
         }
     }
 }
