@@ -261,9 +261,53 @@ function vert2(num, grid){
 }
 ```
 
-Other than this, I surrounded all the `if(x == 0)` statements with a `(if y == 1)` statement so it does not run twice.
+Other than this, I surrounded all the `if(x == 0)` statements with a `if(y == 1)` statement so it does not run twice.
 
 This is the following result:
 <p align="center">
   <img width="600" height="800" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS9.png">
+</p>
+
+# HUGE EDIT
+
+So I realized that my code was NOT working the way I wanted it to... 
+
+When I put the results out on the grid, this is what it looked like:
+
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS11.png">
+</p>
+
+And this obviously did not work. If you look at Y = 8, GB = 7, then you can see that there are multiple `8`s. It took several commenting out code and `console.log()`ing to figure out the issue which was in my GB forloop. 
+```
+if(x <= 2 &&  y <= 9 && y > 6)
+    if(first2(j, grid))
+	grid[i] = remove(grid[i], j);
+if(x <= 5 && x > 2 &&  y <= 9 && y > 6)
+    if(second2(j, grid))
+	grid[i] = remove(grid[i], j);
+if(x <= 9 && x > 5 &&  y <= 9 && y > 6)
+    if(third2(j, grid))
+	grid[i] = remove(grid[i], j);
+```
+Do you see the problem?
+Let me show the solution
+```
+if(x <= 2 &&  y <= 9 && y > 6)
+    if(first3(j, grid))
+	grid[i] = remove(grid[i], j);
+if(x <= 5 && x > 2 &&  y <= 9 && y > 6)
+    if(second3(j, grid))
+	grid[i] = remove(grid[i], j);
+if(x <= 9 && x > 5 &&  y <= 9 && y > 6)
+    if(third3(j, grid))
+	grid[i] = remove(grid[i], j);
+```
+I was calling `first2`, `second2`, and `third2` instead of `first3`, `second3`, and `third3`.
+
+This fixed all errors thus far.
+
+Which then gives the grid:
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS10.png">
 </p>
