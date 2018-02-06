@@ -68,7 +68,7 @@ function remove(array, element) {
     return array.filter(e => e !== element);
 }
 
-setGrid(grid1);
+setGrid(solver(grid1));
 
 
 

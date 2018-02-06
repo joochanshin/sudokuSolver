@@ -6,13 +6,14 @@ function vert1(num, grid){
         if(num == grid[(x) + (y)*9]){
             //console.log("In vertIf " + grid[(x) + (y)*9]);
             return true;
-                //console.log("X: " + x + " Y: " + y + " Value: " + grid[(x) + (y)*9]);
+            //console.log("X: " + x + " Y: " + y + " Value: " + grid[(x) + (y)*9]);
         }    
     }  
 }
 
 function vert2(num, grid){	
 	let x = 1;
+	//console.log("in vert2")
     for(let y = 0; y < 9; y++)
         if(num == grid[(x) + (y)*9])
         	return true;
@@ -20,6 +21,7 @@ function vert2(num, grid){
 
 function vert3(num, grid){	
 	let x = 2;
+	//console.log("in vert3")
     for(let y = 0; y < 9; y++)
         if(num == grid[(x) + (y)*9])
             return true;  

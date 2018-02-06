@@ -32,13 +32,13 @@ function solver(grid){
                         grid[i] = remove(grid[i], j);
                 //  Third three GBS
                 if(x <= 2 &&  y <= 9 && y > 6)
-                    if(first2(j, grid))
+                    if(first3(j, grid))
                         grid[i] = remove(grid[i], j);
                 if(x <= 5 && x > 2 &&  y <= 9 && y > 6)
-                    if(second2(j, grid))
+                    if(second3(j, grid))
                         grid[i] = remove(grid[i], j);
                 if(x <= 9 && x > 5 &&  y <= 9 && y > 6)
-                    if(third2(j, grid))
+                    if(third3(j, grid))
                         grid[i] = remove(grid[i], j);
             }//End of forloop for GB
         }
@@ -50,49 +50,49 @@ function solver(grid){
             //console.log("in if")
             for(let inx = 0; inx < grid[i].length; inx++){
                 //console.log(grid[i][inx]);
-                if(y == 1)
+                if(y == 1 && grid[i].length > 1)
                     if(horiz1(grid[i][inx], grid)){
                         //console.log("index is " + inx);
                         grid[i] = remove(grid[i], grid[i][inx]);
                         inx--;
                         //console.log("");
                     }
-                if(y == 2)
+                if(y == 2 && grid[i].length > 1)
                     if(horiz2(grid[i][inx], grid)){
                         grid[i] = remove(grid[i], grid[i][inx]);
                         inx--;
                     }
-                if(y == 3)
+                if(y == 3 && grid[i].length > 1)
                     if(horiz3(grid[i][inx], grid)){
                         grid[i] = remove(grid[i], grid[i][inx]);
                         inx--;
                     }
-                if(y == 4)
+                if(y == 4 && grid[i].length > 1)
                     if(horiz4(grid[i][inx], grid)){
                         grid[i] = remove(grid[i], grid[i][inx]);
                         inx--;
                     }
-                if(y == 5)
+                if(y == 5 && grid[i].length > 1)
                     if(horiz5(grid[i][inx], grid)){
                         grid[i] = remove(grid[i], grid[i][inx]);
                         inx--;
                     }
-                if(y == 6)
+                if(y == 6 && grid[i].length > 1)
                     if(horiz6(grid[i][inx], grid)){
                         grid[i] = remove(grid[i], grid[i][inx]);
                         inx--;
                     }
-                if(y == 7)
+                if(y == 7 && grid[i].length > 1)
                     if(horiz7(grid[i][inx], grid)){
                         grid[i] = remove(grid[i], grid[i][inx]);
                         inx--;
                     }
-                if(y == 8)
+                if(y == 8 && grid[i].length > 1)
                     if(horiz8(grid[i][inx], grid)){
                         grid[i] = remove(grid[i], grid[i][inx]);
                         inx--;
                     }
-                if(y == 9)
+                if(y == 9 && grid[i].length > 1)
                     if(horiz8(grid[i][inx], grid)){
                         grid[i] = remove(grid[i], grid[i][inx]);
                         inx--;
@@ -107,57 +107,59 @@ function solver(grid){
          if(grid[i].length > 1){
             for(let inx = 0; inx < grid[i].length; inx++){
                 //console.log(x, y, grid[i][inx]);
-                if(y == 1){
-                    if(x == 0)
+                //if(y == 1){
+                    //console.log("X: " + x + " Y: " +  y + " Value: " + grid[i]);
+                    if(x == 0 && grid[i].length > 1)
                         if(vert1(grid[i][inx], grid)){
                             grid[i] = remove(grid[i], grid[i][inx]);
                             inx--;
                         }
-                    if(x == 1)
+                    if(x == 1 && grid[i].length > 1)
                         if(vert2(grid[i][inx], grid)){
                             grid[i] = remove(grid[i], grid[i][inx]);
                             inx--;
                         }
-                    if(x == 2)
+                    if(x == 2 && grid[i].length > 1)
                         if(vert3(grid[i][inx], grid)){
                             grid[i] = remove(grid[i], grid[i][inx]);
                             inx--;
                         }
-                    if(x == 3)
+                    if(x == 3 && grid[i].length > 1)
                         if(vert4(grid[i][inx], grid)){
                             grid[i] = remove(grid[i], grid[i][inx]);
                             inx--;
                         }
-                    if(x == 4)
+                    if(x == 4 && grid[i].length > 1)
                         if(vert5(grid[i][inx], grid)){
                             grid[i] = remove(grid[i], grid[i][inx]);
                             inx--;
                         }
-                    if(x == 5)
+                    if(x == 5 && grid[i].length > 1)
                         if(vert6(grid[i][inx], grid)){
                             grid[i] = remove(grid[i], grid[i][inx]);
                             inx--;
                         }
-                    if(x == 6)
+                    if(x == 6 && grid[i].length > 1)
                         if(vert7(grid[i][inx], grid)){
                             grid[i] = remove(grid[i], grid[i][inx]);
                             inx--;
                         }
-                    if(x == 7)
+                    if(x == 7 && grid[i].length > 1)
                         if(vert8(grid[i][inx], grid)){
                             grid[i] = remove(grid[i], grid[i][inx]);
                             inx--;
                         }
-                    if(x == 8)
+                    if(x == 8 && grid[i].length > 1)
                         if(vert9(grid[i][inx], grid)){
                             grid[i] = remove(grid[i], grid[i][inx]);
                             inx--;
                         }
-                }
+                //}
             }
         }
         console.log("X: " + x + " Y: " +  y + " Value: " + grid[i]);
     }
+    return grid;
 }
 
 
