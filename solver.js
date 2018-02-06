@@ -47,10 +47,38 @@ function solver(grid){
         x = i%9;                        //  This is to get the X value
         y = (Math.floor((i/9) + 1));    //  This is to get the Y value
         if(grid[i].length > 1){
-            console.log("in if")
+            //console.log("in if")
             for(let inx = 0; inx < grid[i].length; inx++){
-                
-                console.log(grid[i][inx]);
+                //console.log(grid[i][inx]);
+                if(y == 1)
+                    if(horiz1(grid[i][inx], grid))
+                        //console.log("index is " + inx);
+                        grid[i] = remove(grid[i], grid[i][inx])
+                        //console.log("");
+                if(y == 2)
+                    if(horiz2(grid[i][inx], grid))
+                        grid[i] = remove(grid[i], grid[i][inx])
+                if(y == 3)
+                    if(horiz3(grid[i][inx], grid))
+                        grid[i] = remove(grid[i], grid[i][inx])
+                if(y == 4)
+                    if(horiz4(grid[i][inx], grid))
+                        grid[i] = remove(grid[i], grid[i][inx])
+                if(y == 5)
+                    if(horiz5(grid[i][inx], grid))
+                        grid[i] = remove(grid[i], grid[i][inx])
+                if(y == 6)
+                    if(horiz6(grid[i][inx], grid))
+                        grid[i] = remove(grid[i], grid[i][inx])
+                if(y == 7)
+                    if(horiz7(grid[i][inx], grid))
+                        grid[i] = remove(grid[i], grid[i][inx])
+                if(y == 8)
+                    if(horiz8(grid[i][inx], grid))
+                        grid[i] = remove(grid[i], grid[i][inx])
+                if(y == 9)
+                    if(horiz8(grid[i][inx], grid))
+                        grid[i] = remove(grid[i], grid[i][inx])
             }
         }
         console.log("X: " + x + " Y: " +  y + " Value: " + grid[i]); // To just see the values of the grid in X and Y format
