@@ -101,7 +101,7 @@ var array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 and then the code 
 ```
-if(grid1[i] === "_"){
+if(grid1[i] === "_")
   grid1[i] = array;
 ```
 To replace each empty spot with an array with all numbers. This is to temporarily hold all possible values. I want to search through each GB to see if one of the number is in there. If it is, the certain element cannot have that value. So this is then removed as a possible value. 
