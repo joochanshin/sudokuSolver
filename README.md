@@ -326,3 +326,10 @@ Only works with somewhat simple Sudoku puzzles. It does not work for the more co
 This was done by calling solver a couple times.
 
 Before:
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS15.png">
+</p>
+After:
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS14.png">
+</p>
