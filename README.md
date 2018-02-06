@@ -207,6 +207,12 @@ Other problems I ran across would be where the If statement should go and when. 
 
 Even the horiz.js file's functions had problems. I made it go through the whole 81 elements and not just the row. Also, it kept returning `true` because I was comparing `num` to essentially itself. 
 
+### Result
 
+In the end, this is what I ended up with:
+
+<p align="center">
+  <img width="600" height="800" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS7.png">
+</p>
 
 
