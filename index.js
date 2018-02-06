@@ -1,5 +1,5 @@
 var grid1 = "_6_3__8_4537_9_____4___63_7_9__51238_________71362__4_3_64___1_____6_5231_2__9_8_".split("");
-var grid2 = "_2_456789457_8_236689237_4___5362974274_9_6533965748___4_618397761_4_528938725_6_";
+var grid2 = "_2_456789457_8_236689237_4___5362974274_9_6533965748___4_618397761_4_528938725_6_".split("");
 var keys = document.getElementsByClassName("keys");
 
 
@@ -43,6 +43,14 @@ function drawGB(){ //   to see 3x3 grids
     }
 }
 
+function makeGrid(grid){
+    var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    for(let i = 0; i < 81; i++)
+        if(grid[i] === "_")
+            grid[i] = array;
+    return grid;
+}
+
 
 /*
 //  For first 3x3 box: gb1 (Green box 1)
@@ -68,7 +76,9 @@ function remove(array, element) {
     return array.filter(e => e !== element);
 }
 
-setGrid(solver(grid1));
+//setGrid(solver(solver(solver(makeGrid(grid1)))));
+//setGrid(solver(solver(solver(makeGrid(grid2)))));
+setGrid(solver(makeGrid(grid1)));
 
 
 
