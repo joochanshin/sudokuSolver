@@ -217,7 +217,7 @@ In the end, this is what I ended up with:
 
 ### Edit
 
-I am sorry. I realized that the earlier code didn't take out ALL the elements in the array that fund a match because after removing an element in an array, the index skips to the next one. I found this error when Y = 2. So then I commented out all the other if statements and only checked when Y = 2. 
+I am sorry. I realized that the earlier code didn't take out ALL the elements in the array that found a match because after removing an element in an array, the index skips to the next one. I found this error when Y = 2. So then I commented out all the other `if statements` and only checked when Y = 2. 
 
 Putting a whole bunch of `console.log()s` into the horiz2 function to see if `num == grid[(x) + (y)*9]`
 
