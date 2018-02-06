@@ -275,7 +275,7 @@ So I realized that my code was NOT working the way I wanted it to...
 When I put the results out on the grid, this is what it looked like:
 
 <p align="center">
-  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS11.png">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS12.png">
 </p>
 
 And this obviously did not work. If you look at Y = 8, GB = 7, then you can see that there are multiple `8`s. It took several commenting out code and `console.log()`ing to figure out the issue which was in my GB forloop. 
