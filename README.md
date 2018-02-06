@@ -101,7 +101,7 @@ var array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 and then the code 
 ```
-if(grid1[i] === "_"){
+if(grid1[i] === "_")
   grid1[i] = array;
 ```
 To replace each empty spot with an array with all numbers. This is to temporarily hold all possible values. I want to search through each GB to see if one of the number is in there. If it is, the certain element cannot have that value. So this is then removed as a possible value. 
@@ -215,4 +215,26 @@ In the end, this is what I ended up with:
   <img width="600" height="800" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS7.png">
 </p>
 
+### Edit
 
+I am sorry. I realized that the earlier code didn't take out ALL the elements in the array that fund a match because after removing an element in an array, the index skips to the next one. I found this error when Y = 2. So then I commented out all the other if statements and only checked when Y = 2. 
+
+Putting a whole bunch of `console.log()s` into the horiz2 function to see if `num == grid[(x) + (y)*9]`
+
+And when it did, it wouldn't do it for the second element because it skipped it.
+
+I then fixed this problem by having
+```
+if(y == 2)
+    if(horiz2(grid[i][inx], grid)){
+	grid[i] = remove(grid[i], grid[i][inx]);
+	inx--;
+    }
+```
+Which then resets the index back to where it should be and this works fine. 
+
+Which results in this:
+<p align="center">
+  <img width="600" height="800" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS8.png">
+</p>
+Use this screenshot and the earlier one right before the edit while looking at the grid to see the differences and the fixes.
