@@ -318,3 +318,11 @@ Fixed, and here are results:
 <p align="center">
   <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS13.png">
 </p>
+
+# Finished Simple Solver
+
+Only works with somewhat simple Sudoku puzzles. It does not work for the more complex ones. That will be a project that will be finished in the future.
+
+This was done by calling solver a couple times.
+
+Before:
