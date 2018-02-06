@@ -238,3 +238,32 @@ Which results in this:
   <img width="600" height="800" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS8.png">
 </p>
 Use this screenshot and the earlier one right before the edit while looking at the grid to see the differences and the fixes.
+
+## Vertical
+
+This part did not take very long. I reused a lot of the same functions as I did with horiz.js and changed very few things.
+
+Such as
+```
+if(x == 0)
+    if(vert1(grid[i][inx], grid)){
+	grid[i] = remove(grid[i], grid[i][inx]);
+	inx--;
+    }
+```
+and
+```
+function vert2(num, grid){	
+    let x = 1;
+    for(let y = 0; y < 9; y++)
+        if(num == grid[(x) + (y)*9])
+            return true;
+}
+```
+
+Other than this, I surrounded all the `if(x == 0)` statements with a `(if y == 1)` statement so it does not run twice.
+
+This is the following result:
+<p align="center">
+  <img width="600" height="800" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS9.png">
+</p>
