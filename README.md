@@ -229,7 +229,7 @@ if(y == 2)
     if(horiz2(grid[i][inx], grid)){
 	grid[i] = remove(grid[i], grid[i][inx]);
 	inx--;
-}
+    }
 ```
 Which then resets the index back to where it should be and this works fine. 
 
