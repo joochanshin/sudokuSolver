@@ -19,7 +19,7 @@ function setGrid(grid){//   Makes grid and the boxes
         document.getElementById('top').appendChild(key);
     }
     drawGrid(grid);
-    drawGB();
+    //drawGB();
 }
 
 function drawGrid(grid){//  prints out text onto the boxes
@@ -76,9 +76,10 @@ function remove(array, element) {
     return array.filter(e => e !== element);
 }
 
+setGrid(grid1);
 //setGrid(solver(solver(solver(makeGrid(grid1)))));
 //setGrid(solver(solver(solver(makeGrid(grid2)))));
-setGrid(solver(makeGrid(grid1)));
+//setGrid(solver(makeGrid(grid1)));
 
 
 
