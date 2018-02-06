@@ -89,7 +89,7 @@ This is part of the output on the console:
 
 In order for me to really try fully grasp how to solve this, I tried to break it down into very basic steps. 
 
-### GB
+## GB
 
 I wanted to to loop through each GB first which is each 3x3 box. 
 
@@ -149,3 +149,64 @@ Which then outputs this:
 <p align="center">
   <img width="700" height="800" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS6.png">
 </p>
+
+## Horizontal
+
+I sorta knew how to approach this but did not know how to execute it. I wanted to check each horizontal line to see if there are any matches and then take out the matched number. But I thought I can do it through a single if statement, which was very incorrect.
+
+Instead of 
+```
+if(grid1[i] === "_")
+```
+I had
+```
+if(grid[i].length > 1)
+ ```
+checking if the current index had more than one element. I tried to do `isArray` but it did not work the way I wanted and when I tried `typeof grid[i] === "object"` it returned that all elements were an object.
+
+I then iterated through the forloop
+```
+for(let inx = 0; inx < grid[i].length; inx++)
+```
+because I am only checking the numbers in the array of grid[i] and not all possible values which is why I did not do 
+```
+for(let inx = 0; inx < 10; inx++)
+```
+
+Inside this forloop, I had this If statement
+```
+if(y == 1)
+  if(horiz1(grid[i][inx], grid))
+    grid[i] = remove(grid[i], grid[i][inx])
+```
+This is to go through each Y, which is going through each horizontal line and checking if there is a value that matches `grid[i][inx]`. 
+
+And in my horiz.js file, I have a function for each horizontal line
+```
+function horiz1(num, grid){	
+	let y = 0;
+    for(let x = 0; x < 9; x++){
+        //console.log(num, grid[(x) + (y)*9])
+        if(num == grid[(x) + (y)*9]){
+            //console.log("In horizIf " + grid[(x) + (y)*9])
+            return true;
+                //console.log("X: " + x + " Y: " + y + " Value: " + grid[(x) + (y)*9]);
+        }    
+    }  
+}
+```
+The `console.log()s` helped tremendously in terms of debugging, but more on that later.
+
+This basically goes through every X element while y is at a constant value. Then going through each element in this row where `num` is `grid[i][inx]`.
+
+### Some debugs
+
+I was trying to `grid[i] = remove(grid[i], inx)` and was wondering why this was not working. A lot of problems were rising and that was because value 8 is in index 2, and for some reason `2` was being removed from the array. I thought it was an index problem but I was taking out the index from the array, so I then replaced the code with `grid[i] = remove(grid[i], grid[i][inx])` which did what I want to do.
+
+Other problems I ran across would be where the If statement should go and when. I thought the position of the If statements and forloops were in the best place. This was figured out through a lot of debugging and a whole bunch of `console.log()` everywhere. 
+
+Even the horiz.js file's functions had problems. I made it go through the whole 81 elements and not just the row. Also, it kept returning `true` because I was comparing `num` to essentially itself. 
+
+
+
+
