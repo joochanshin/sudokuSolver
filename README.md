@@ -315,3 +315,6 @@ Which then gives the grid:
 ## Edit \#2
 This is just editing the error in the last grid. It was another spelling error and calling a function wrong.
 Fixed, and here are results:
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS11.png">
+</p>
