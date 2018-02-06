@@ -15,7 +15,7 @@ function horiz2(num, grid){
     for(let x = 0; x < 9; x++){
         //console.log(num, grid[(x) + (y)*9])
         if(num == grid[(x) + (y)*9]){
-            //console.log("In horizIf " + grid[(x) + (y)*9])
+            //console.log("In horizIf " + num + " " + grid[(x) + (y)*9])
             return true;
                 //console.log("X: " + x + " Y: " + y + " Value: " + grid[(x) + (y)*9]);
         }    

@@ -51,34 +51,52 @@ function solver(grid){
             for(let inx = 0; inx < grid[i].length; inx++){
                 //console.log(grid[i][inx]);
                 if(y == 1)
-                    if(horiz1(grid[i][inx], grid))
+                    if(horiz1(grid[i][inx], grid)){
                         //console.log("index is " + inx);
-                        grid[i] = remove(grid[i], grid[i][inx])
+                        grid[i] = remove(grid[i], grid[i][inx]);
+                        inx--;
                         //console.log("");
+                    }
                 if(y == 2)
-                    if(horiz2(grid[i][inx], grid))
-                        grid[i] = remove(grid[i], grid[i][inx])
+                    if(horiz2(grid[i][inx], grid)){
+                        grid[i] = remove(grid[i], grid[i][inx]);
+                        inx--;
+                    }
                 if(y == 3)
-                    if(horiz3(grid[i][inx], grid))
-                        grid[i] = remove(grid[i], grid[i][inx])
+                    if(horiz3(grid[i][inx], grid)){
+                        grid[i] = remove(grid[i], grid[i][inx]);
+                        inx--;
+                    }
                 if(y == 4)
-                    if(horiz4(grid[i][inx], grid))
-                        grid[i] = remove(grid[i], grid[i][inx])
+                    if(horiz4(grid[i][inx], grid)){
+                        grid[i] = remove(grid[i], grid[i][inx]);
+                        inx--;
+                    }
                 if(y == 5)
-                    if(horiz5(grid[i][inx], grid))
-                        grid[i] = remove(grid[i], grid[i][inx])
+                    if(horiz5(grid[i][inx], grid)){
+                        grid[i] = remove(grid[i], grid[i][inx]);
+                        inx--;
+                    }
                 if(y == 6)
-                    if(horiz6(grid[i][inx], grid))
-                        grid[i] = remove(grid[i], grid[i][inx])
+                    if(horiz6(grid[i][inx], grid)){
+                        grid[i] = remove(grid[i], grid[i][inx]);
+                        inx--;
+                    }
                 if(y == 7)
-                    if(horiz7(grid[i][inx], grid))
-                        grid[i] = remove(grid[i], grid[i][inx])
+                    if(horiz7(grid[i][inx], grid)){
+                        grid[i] = remove(grid[i], grid[i][inx]);
+                        inx--;
+                    }
                 if(y == 8)
-                    if(horiz8(grid[i][inx], grid))
-                        grid[i] = remove(grid[i], grid[i][inx])
+                    if(horiz8(grid[i][inx], grid)){
+                        grid[i] = remove(grid[i], grid[i][inx]);
+                        inx--;
+                    }
                 if(y == 9)
-                    if(horiz8(grid[i][inx], grid))
-                        grid[i] = remove(grid[i], grid[i][inx])
+                    if(horiz8(grid[i][inx], grid)){
+                        grid[i] = remove(grid[i], grid[i][inx]);
+                        inx--;
+                    }
             }
         }
         console.log("X: " + x + " Y: " +  y + " Value: " + grid[i]); // To just see the values of the grid in X and Y format
