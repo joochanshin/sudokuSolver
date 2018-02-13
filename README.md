@@ -496,3 +496,31 @@ Which gave the desired result that looks like this:
 <p align="center">
   <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS18.png">
 </p>
+
+## Making empty elements in the sudoku grid
+
+I wanted to make a `forloop` that will insert "_" randomly. 
+
+I knew how to do it, but I didn't know how to execute it. Took me some time to think through it and came to a somewhat decent solution. I have two random number generators: one for seeing how many "_" to make and the other one to randomly put it in whatever index.
+
+With some playing around, this was the resulting code:
+```
+for(let i = 0; i < 9; i++){
+    var five = Math.floor(Math.random() * 5) + 1;
+	for(let j = 0; j < 9; j++){
+	    var nine = Math.floor(Math.random() * 2)+ 1;
+		if(2 === nine && five-- >= 0){
+		    rand_grid[i][j] = "_";
+			j--;
+		}
+	}
+}
+```
+Which then resulted in this:
+
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS21.png">
+</p>
+
+
+
