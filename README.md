@@ -441,3 +441,58 @@ This is what it looks like on the console:
 <p align="center">
   <img width="300" height="300" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS17.png">
 </p>
+
+### Some errors...
+
+I was trying to bring it to the `function setGrid(grid)` which also calls `function drawGrid(grid)` and this came across an error because I had a multidimensional array for my randomized grid, but my draw and solver only works for a one-dimensional array. Because of this, I just had to transform the multi-dimensional array into a one-dimensional array.
+
+<p align="center">
+  <img width="300" height="300" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS19.png">
+</p>
+
+This was happening because an arary is stored in an array. The `drawGrid` function is inserting each array, and not going into it. Which is why there are undefined elements after the first arary. 
+
+After addind the line of code `rand_grid = rand_grid.toString().split("");` which should conver it into a string then break it into an array, it gives this:
+
+<p align="center">
+  <img width="300" height="300" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS20.png">
+</p>
+
+which is not what I want. It brough the "," into the array. 
+
+I tried doing
+```
+for(let i = 0; i < rand_grid.length; i++){
+	if(rand_grid[i] === ","){
+		rand_grid = rand_grid.splice(i, 161);
+	}
+	console.log(rand_grid[i] + " " + i);
+}
+```
+but this gave me more errors than I wanted.
+
+So then I wanted to take advatange of my `remove function` I made earlier which is
+```
+function remove(array, element) {
+    return array.filter(e => e !== element);
+}
+```
+
+And then 
+```
+for(let i = 0; i < rand_grid.length; i++){
+	if(rand_grid[i] != ","){
+		console.log(i + " " + rand_grid[i]);
+		grid[counter] = remove(rand_grid, i)[i];
+		//i--;
+		counter++;
+	}
+}
+```
+having initialized `grid` and `counter` variables earlier.
+
+Which gave the desired result that looks like this: 
+
+<p align="center">
+  <img width="600" height="600" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS18.png">
+</p>
