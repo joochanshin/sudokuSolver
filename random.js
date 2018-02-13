@@ -95,6 +95,18 @@ function randGrid(){
 	// 	}
 	// 	console.log(rand_grid[i] + " " + i);
 	// }
+	console.log(rand_grid);
+
+	for(let i = 0; i < 9; i++){
+		var five = Math.floor(Math.random() * 5) + 1;
+		for(let j = 0; j < 9; j++){
+			var nine = Math.floor(Math.random() * 2)+ 1;
+			if(2 === nine && five-- >= 0){
+				rand_grid[i][j] = "_";
+				j--;
+			}
+		}
+	}
 	rand_grid = rand_grid.toString().split("");
 	for(let i = 0; i < rand_grid.length; i++){
 		//console.log(i + " " + rand_grid[i]);
@@ -105,7 +117,10 @@ function randGrid(){
 			counter++;
 		}
 	}
+	
 	//console.log(grid);
+
+
 
 	return grid;
 }

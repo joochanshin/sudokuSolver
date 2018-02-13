@@ -84,7 +84,7 @@ for(let i = 0; i < 81; i++)
     empt += " ";
 
 
-setGrid(empt);
+setGrid(grid1);
 //setGrid(solver(solver(solver(makeGrid(grid2)))));
 //setGrid(solver(solver(solver(makeGrid(grid2)))));
 //setGrid(solver(makeGrid(grid1)));
