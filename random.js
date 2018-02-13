@@ -34,6 +34,7 @@ var rand_grid = [];
 // 			return false;
 // 	return true;
 // }
+
 // function checkColumn(x, y, rand){
 // 	//console.log("In Check");
 // 	for(let i = 0; i < 9; i++)
@@ -43,9 +44,7 @@ var rand_grid = [];
 // }
 
 var test = [1,2,3,4,5,6,7,8,9];
-var temp = shuffle(test);
-var test2 = [4,5,6,7,8,9,1,2,3];
-var test3 = [7,8,9,1,2,3,4,5,6];
+var temp = test;//shuffle(test);
 for(let i = 0; i < 9; i++){
 	if(i === 0){
 		rand_grid[i] = test;
