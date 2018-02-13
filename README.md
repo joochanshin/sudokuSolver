@@ -522,5 +522,28 @@ Which then resulted in this:
   <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS21.png">
 </p>
 
+# Updated solver
 
+Usually, if there are multiple solutions, then my code breaks and returns an array of possible values. Because of this, I always let the first redunant array equal its first element. 
 
+```
+for(let i = 0; i < 81; i++){
+    if(tempGrid[i].length > 1){
+        tempGrid[i] = tempGrid[i][0];
+        break;
+    }
+}
+```
+This solved the redundant solution problem. But sometimes, one time is not enough. So I made a `forloop` that runs it x amount of times to be fully sure it is solved. I tried to do it in a `while loop` but it failed to many extents. 
+
+But now it works. 
+
+Before: 
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS22.png">
+</p>
+
+After: 
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS23.png">
+</p>
