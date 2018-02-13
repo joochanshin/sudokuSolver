@@ -6,4 +6,13 @@
   left: 50%;
   transform: translate(-50%, -50%); }
 
+#box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: blue;
+  text-align: center;
+  line-height: 175px;
+  color: white; }
+
 /*# sourceMappingURL=main.css.map */

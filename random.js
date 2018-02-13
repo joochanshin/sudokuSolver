@@ -99,13 +99,13 @@ function randGrid(){
 	for(let i = 0; i < rand_grid.length; i++){
 		//console.log(i + " " + rand_grid[i]);
 		if(rand_grid[i] != ","){
-			console.log(i + " " + rand_grid[i]);
+			//console.log(i + " " + rand_grid[i]);
 			grid[counter] = remove(rand_grid, i)[i];
 			//i--;
 			counter++;
 		}
 	}
-	console.log(grid);
+	//console.log(grid);
 
 	return grid;
 }

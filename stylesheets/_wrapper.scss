@@ -7,3 +7,13 @@
 #_green_{
 	@extend #wrapper;
 }
+
+#box{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: blue;
+	text-align: center;
+	line-height: 175px;
+	color: white;
+}

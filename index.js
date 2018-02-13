@@ -24,9 +24,8 @@ function setGrid(grid){//   Makes grid and the boxes
 
 function drawGrid(grid){//  prints out text onto the boxes
     let index = 0;
-    for(let i = 0; i < 81; i++){
+    for(let i = 0; i < 81; i++)
         keys[i].innerHTML = grid[i];
-    }
 }
 
 function drawGB(){ //   to see 3x3 grids
@@ -71,12 +70,21 @@ function _try_(){
     }
 }
 
+function _button_ (){
+    drawGrid(randGrid());
+}
+
 
 function remove(array, element) {
     return array.filter(e => e !== element);
 }
 
-setGrid(randGrid());
+var empt = " ";
+for(let i = 0; i < 81; i++)
+    empt += " ";
+
+
+setGrid(empt);
 //setGrid(solver(solver(solver(makeGrid(grid2)))));
 //setGrid(solver(solver(solver(makeGrid(grid2)))));
 //setGrid(solver(makeGrid(grid1)));
