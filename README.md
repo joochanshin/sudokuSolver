@@ -1,7 +1,9 @@
 # sudokuSolver.js
 
-This is a simple sudoku solver I am trying to create through Javascript.
-Right now, I am trying to make a random sudoku generator as well. 
+This is a sudoku solver I made through Javascript. 
+This also creates a random sudoku grid/board so you can see that it can be solved.
+
+Here is my journey.
 
 ## Getting Started
 
