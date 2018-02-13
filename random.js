@@ -88,7 +88,6 @@ function randGrid(){
 	var grid = [];
 	var counter = 0;
 	// console.log(rand_grid);
-	rand_grid = rand_grid.toString().split("");
 	// console.log(rand_grid);
 	// for(let i = 0; i < rand_grid.length; i++){
 	// 	if(rand_grid[i] === ","){
@@ -96,6 +95,7 @@ function randGrid(){
 	// 	}
 	// 	console.log(rand_grid[i] + " " + i);
 	// }
+	rand_grid = rand_grid.toString().split("");
 	for(let i = 0; i < rand_grid.length; i++){
 		//console.log(i + " " + rand_grid[i]);
 		if(rand_grid[i] != ","){
