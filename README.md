@@ -401,3 +401,43 @@ function checkRow(x, y, rand){
 }
 ```
 It took forever for the program to run. There was some sort of error no matter where I put it in the `forloop`. So because of this, I needed to find a new approach.
+
+## Different approach
+
+How about making an array, and having the rest of the grid dependent on that array, but shifted so it will never match another number in the same column, row, or GB?
+
+This was a good approach, but might be confusing to some. 
+
+Here is a screenshot of what a simple sudoku template is supposed to look like:
+<p align="center">
+  <img width="300" height="300" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS16.png">
+</p>
+
+Making this manually was very simple, obviously; however, making this somewhat dynamically was a little more difficult. 
+
+I tried using the in-build functions such as `.splice()` and `.push()` so I can take out certain elements and push it in the back. But this brought way too many errors. 
+
+So then I had to do the longer way, which was to do
+```
+temp = [test[3], test[4], test[5], test[6], test[7], test[8], test[0], test[1], test[2]];
+rand_grid[i] = temp;
+```
+in each `if statement`. Each `if` and `else if` statements are corresponding to each Y value. 
+After changing some of the indexes (which were also very confusing) and then addidng a `shuffle` function which looks like this:
+```
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+}
+```
+the random sudoku maker works.
+
+This is what it looks like on the console:
+<p align="center">
+  <img width="300" height="300" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS17.png">
+</p>
