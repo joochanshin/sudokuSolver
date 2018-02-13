@@ -59,7 +59,7 @@ was not needed
   <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS3.png">
 </p>
 
-Further more, I added a green dashed lines to better see the divions of 3x3 grids
+Further more, I added green dashed lines to better see the divisions of 3x3 grids (will be called green box (GB) in future reference)
 
 <p align="center">
   <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS4.png">
@@ -87,7 +87,7 @@ This is part of the output on the console:
 
 ## Solver
 
-In order for me to really try fully grasp how to solve this, I tried to break it down into very basic steps. 
+In order for me to really fully grasp how to solve this, I tried to break it down into very basic steps. 
 
 ## GB
 
@@ -104,7 +104,7 @@ and then the code
 if(grid1[i] === "_")
   grid1[i] = array;
 ```
-To replace each empty spot with an array with all numbers. This is to temporarily hold all possible values. I want to search through each GB to see if one of the number is in there. If it is, the certain element cannot have that value. So this is then removed as a possible value. 
+to replace each empty spot with an array with all numbers. This is to temporarily hold all possible values. I want to search through each GB to see if one of the numbers is in there. If it is, the certain element cannot have that value. So this is then removed as a possible value. 
 
 For example: in the example grid I have, the first GB has the values:
 ```
@@ -113,7 +113,7 @@ _ 6 _
 _ 4 _
 ```
 
-Next I will show what happens. 
+Next, I will show what happens. 
 
 In my `solver.js` file, I have this code to check the first set of GBs: 
 ```
@@ -152,7 +152,7 @@ Which then outputs this:
 
 ## Horizontal
 
-I sorta knew how to approach this but did not know how to execute it. I wanted to check each horizontal line to see if there are any matches and then take out the matched number. But I thought I can do it through a single if statement, which was very incorrect.
+I sorta knew how to approach this but did not know how to execute it. I wanted to check each horizontal line to see if there are any matches and then take out the matched number. But I thought I can do it through a single `if statement`, which was very incorrect.
 
 Instead of 
 ```
@@ -217,7 +217,7 @@ In the end, this is what I ended up with:
 
 ### Edit
 
-I am sorry. I realized that the earlier code didn't take out ALL the elements in the array that fund a match because after removing an element in an array, the index skips to the next one. I found this error when Y = 2. So then I commented out all the other if statements and only checked when Y = 2. 
+I am sorry. I realized that the earlier code didn't take out ALL the elements in the array that found a match because after removing an element in an array, the index skips to the next one. I found this error when Y = 2. So then I commented out all the other `if statements` and only checked when Y = 2. 
 
 Putting a whole bunch of `console.log()s` into the horiz2 function to see if `num == grid[(x) + (y)*9]`
 
@@ -319,6 +319,8 @@ Fixed, and here are results:
   <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS13.png">
 </p>
 
+and I added `&& grid[i].length > 1` to a lot of the `if statements` so that it does not take out an element if the length of the array is only 1. Before, I was returning empty elements and this was obviously not something that should happen.
+
 # Finished Simple Solver
 
 Only works with somewhat simple Sudoku puzzles. It does not work for the more complex ones. That will be a project that will be finished in the future.
@@ -326,3 +328,10 @@ Only works with somewhat simple Sudoku puzzles. It does not work for the more co
 This was done by calling solver a couple times.
 
 Before:
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS15.png">
+</p>
+After:
+<p align="center">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS14.png">
+</p>
