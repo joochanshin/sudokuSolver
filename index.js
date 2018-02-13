@@ -76,8 +76,8 @@ function remove(array, element) {
     return array.filter(e => e !== element);
 }
 
-//setGrid(grid1);
-setGrid(solver(solver(solver(makeGrid(grid2)))));
+setGrid(randGrid());
+//setGrid(solver(solver(solver(makeGrid(grid2)))));
 //setGrid(solver(solver(solver(makeGrid(grid2)))));
 //setGrid(solver(makeGrid(grid1)));
 
