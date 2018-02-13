@@ -17,3 +17,8 @@
 	line-height: 175px;
 	color: white;
 }
+
+#box2{
+	@extend #box;
+	background-color: green;
+}

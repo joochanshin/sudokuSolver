@@ -155,7 +155,7 @@ function solver(grid){
                 //}
             }
         }
-        console.log("X: " + x + " Y: " +  y + " Value: " + grid[i]);
+        //console.log("X: " + x + " Y: " +  y + " Value: " + grid[i]);
     }
     // for(let i = 0; i < 81; i++){
     //     x = i%9;                        //  This is to get the X value

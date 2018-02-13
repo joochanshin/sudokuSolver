@@ -1,5 +1,6 @@
 var grid1 = "_6_3__8_4537_9_____4___63_7_9__51238_________71362__4_3_64___1_____6_5231_2__9_8_".split("");
 var grid2 = "_2_456789457_8_236689237_4___5362974274_9_6533965748___4_618397761_4_528938725_6_".split("");
+var globalGrid = "";
 var keys = document.getElementsByClassName("keys");
 
 
@@ -71,7 +72,33 @@ function _try_(){
 }
 
 function _button_ (){
-    drawGrid(randGrid());
+    globalGrid = randGrid();
+    drawGrid(globalGrid);
+}
+
+function _solve_ (){
+    for(let i = 0; i < 5; i++)
+        anotherOne();
+}
+
+function anotherOne(){
+    let tempGrid = solver(solver(solver(solver(makeGrid(globalGrid)))));
+    var tempCounter = 0;
+    var notSolved = true;
+    console.log(tempCounter);
+    for(let i = 0; i < 81; i++){
+        if(tempGrid[i].length > 1){
+            console.log("In if statement");
+            tempGrid[i] = tempGrid[i][0];
+            break;
+        }
+        else{
+            console.log("In else statement");
+        }
+    }
+    
+    //tempGrid = solver(solver(solver(solver(makeGrid(tempGrid)))));
+    drawGrid(tempGrid);
 }
 
 
