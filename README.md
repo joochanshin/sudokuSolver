@@ -1,6 +1,7 @@
 # sudokuSolver.js
 
 This is a simple sudoku solver I am trying to create through Javascript.
+Right now, I am trying to make a random sudoku generator as well. 
 
 ## Getting Started
 
@@ -335,3 +336,68 @@ After:
 <p align="center">
   <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS14.png">
 </p>
+
+# Random Sudoku Generator
+
+I wanted to make a random sudoku generator from scratch and this first started off to be very difficult. I didn't know where to even start. 
+
+## Initial thoughts
+
+I first tried to make random arrays of numbers from (1-9) and then inserting it into a grid and changing it so that there isn't the same number in the same Column.
+```
+var rand_grid = [];
+for(let i = 0; i < 9; i++)
+	rand_grid[i] = randArray();
+
+for(let x = 0; x < 9; x++)
+	for(let y = 0; y < 9; y++){
+		rand = Math.floor(Math.random() * 9) + 1;
+		if(checkRow(x, y, rand))
+			rand_grid[x][y] = rand;
+		else
+			y--;
+	}
+
+function randArray(){
+	array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+	var tmp, current, top = array.length;
+	if(top) 
+		while(--top) {
+		    current = Math.floor(Math.random() * (top + 1));
+		    tmp = array[current];
+		    array[current] = array[top];
+			array[top] = tmp;
+		}
+	return array;
+}
+
+function checkColumn(x, y, rand){
+	//console.log("In Check");
+	for(let i = 0; i < 9; i++)
+		if(rand_grid[x][i] === rand)
+			return false;
+	return true;
+}
+```
+Let me break this down into simpler terms. 
+
+My function `function randArray()` is supposed to randomize an array of all integers from 1-9 and output that array.
+
+The first `forloop` 
+```
+for(let i = 0; i < 9; i++)
+    rand_grid[i] = randArray();
+```
+just inserts the random arrays into the grid. And then the second `forloop` is supposed to check for redundent numbers in the same row and switch it out with a number that works; this worked for every coumn, however, there were row conflicts.
+
+So after I made a 
+```
+function checkRow(x, y, rand){
+	//console.log("In Check");
+	for(let i = 0; i < 9; i++)
+		if(rand_grid[x][i] === rand)
+			return false;
+	return true;
+}
+```
+It took forever for the program to run. There was some sort of error no matter where I put it in the `forloop`. So because of this, I needed to find a new approach.
