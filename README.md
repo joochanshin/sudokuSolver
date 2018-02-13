@@ -447,7 +447,7 @@ This is what it looks like on the console:
 I was trying to bring it to the `function setGrid(grid)` which also calls `function drawGrid(grid)` and this came across an error because I had a multidimensional array for my randomized grid, but my draw and solver only works for a one-dimensional array. Because of this, I just had to transform the multi-dimensional array into a one-dimensional array.
 
 <p align="center">
-  <img width="300" height="300" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS19.png">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS19.1.png">
 </p>
 
 This was happening because an arary is stored in an array. The `drawGrid` function is inserting each array, and not going into it. Which is why there are undefined elements after the first arary. 
@@ -455,7 +455,7 @@ This was happening because an arary is stored in an array. The `drawGrid` functi
 After addind the line of code `rand_grid = rand_grid.toString().split("");` which should conver it into a string then break it into an array, it gives this:
 
 <p align="center">
-  <img width="300" height="300" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS20.png">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS20.1.png">
 </p>
 
 which is not what I want. It brough the "," into the array. 
@@ -494,5 +494,5 @@ having initialized `grid` and `counter` variables earlier.
 Which gave the desired result that looks like this: 
 
 <p align="center">
-  <img width="600" height="600" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS18.png">
+  <img width="700" height="700" src="https://raw.githubusercontent.com/joochanshin/sudokuSolver/master/ScreenShots/SS18.png">
 </p>
