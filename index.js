@@ -77,7 +77,7 @@ function _button_ (){
 }
 
 function _solve_ (){
-    for(let i = 0; i < 5; i++)
+    for(let i = 0; i < 7; i++)
         anotherOne();
 }
 
@@ -85,7 +85,7 @@ function anotherOne(){
     let tempGrid = solver(solver(solver(solver(makeGrid(globalGrid)))));
     var tempCounter = 0;
     var notSolved = true;
-    console.log(tempCounter);
+    //console.log(tempCounter);
     for(let i = 0; i < 81; i++){
         if(tempGrid[i].length > 1){
             console.log("In if statement");
@@ -111,7 +111,7 @@ for(let i = 0; i < 81; i++)
     empt += " ";
 
 
-setGrid(grid1);
+setGrid(empt);
 //setGrid(solver(solver(solver(makeGrid(grid2)))));
 //setGrid(solver(solver(solver(makeGrid(grid2)))));
 //setGrid(solver(makeGrid(grid1)));
